@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Target Project</string>
+    <string name="target">Цель:</string>
+    <string name="setTarget">Чтобы достичь цель, нужно ее задать.</string>
+</resources>
