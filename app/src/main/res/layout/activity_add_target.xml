@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTargetActivity">
+    <TextView
+        android:id="@+id/addTargetHDR_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/add_target"
+        style="@style/Theme.TargetProject.TextViewBold"
+        />
+
+    <EditText
+        android:id="@+id/addTarget_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/addTargetHDR_textView"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
