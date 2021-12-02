@@ -5,6 +5,5 @@ import java.util.*
 
 // Класс для работы с целью
 data class TargetClass(
-     val target: String,        // Цель
-     val date: Date             // Дата постановки
+     val target: String        // Цель
 )

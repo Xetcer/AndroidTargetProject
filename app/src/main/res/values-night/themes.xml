@@ -12,5 +12,26 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:textViewStyle">@style/Theme.TargetProject.TextViewCmn</item>>
+    </style>
+    <style name="Theme.TargetProject.TextViewCmn" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">22sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="Theme.TargetProject.TextViewBold" parent="@style/Theme.TargetProject.TextViewCmn">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAlignment">inherit</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="Theme.TargetProject.ImageView" >
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+    <style name="Theme.TargetProject.Buttons" >
+        <item name="backgroundTint">@color/white</item>
+        <item name="tint">@color/black</item>
     </style>
 </resources>
