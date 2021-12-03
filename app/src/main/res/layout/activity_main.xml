@@ -28,6 +28,14 @@
         android:layout_height="wrap_content"
         android:text="@string/setTarget"
         app:layout_constraintTop_toBottomOf="@+id/header_textView" />
+    <TextView
+        android:id="@+id/targetTime_textView"
+        style="@style/Theme.TargetProject.TextViewBold"
+        android:textColor="@color/red"
+        android:gravity="right"
+        app:layout_constraintTop_toBottomOf="@+id/target_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/closeApp_btn"
