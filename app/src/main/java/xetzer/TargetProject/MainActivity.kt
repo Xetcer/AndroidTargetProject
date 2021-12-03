@@ -11,7 +11,7 @@ import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
 
-const val RESTORE_TAG = "Restore tag"
+public const val ADD_TARGET_TAG = "NewTarget"
 
 class MainActivity : AppCompatActivity() {
     private lateinit var addTargetBtn: FloatingActionButton
@@ -28,12 +28,22 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         restoreTargets()
         bindWidgets()
-        // TODO добавить получение новой цели из активности AddTargetActivity
-        if (savedInstanceState != null) {
-            val message: String? = savedInstanceState.getString(RESTORE_TAG)
-            val dateTime: String = getDayTime()
-            if (message != null) {
-                targetList.add(TargetClass(message, dateTime))
+        // Получаем новую цель из AddTargetActivity
+        val newTarget: String? = intent.extras?.getString(ADD_TARGET_TAG, "Нет цели")
+        val dateTime: String = getDayTime()
+        if (newTarget != null){
+            if (newTarget != R.string.NoTarget.toString()) {
+                // Поищем к коллеции повторы и если найдем то не будет добавлять новую цель.
+                var repeatSearchFlag : Boolean = false
+                for (item in targetList){
+                    if (item.target == newTarget.toString()){
+                        repeatSearchFlag = true
+                        break
+                    }
+                }
+                if (!repeatSearchFlag){
+                    targetList.add(TargetClass(newTarget.toString(), dateTime))
+                }
             }
         }
     }
